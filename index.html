@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <style>
+     /* :root có chức năng tạo định dạng ảo ,nơi chứa các thuộc tính do bạn định nghĩa ra   */
+     :root{
+         --display:flex;
+         --width:100%;
+         --height:100%;
+     }
+     .container{
+         width:var(--width);
+         height:700px;
+     }
+     .header{
+    display: var(--display);
+    width:var(--width);
+    height:80px;
+    border-bottom: 1px solid rgb(248, 246, 246);
+    z-index: 50;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: #fff;
+ 
+}
+.container .header .header-left{
+    width: 60%;
+    height: var(--height);
+    display: var(--display);
+}
+.container .header .header-right{
+    width:40%;
+    height:var(--height);
+display: var(--display);
+position: relative;
+}
+.container .header .header-right .header-right-ul {
+    list-style-type: none;
+    display: var(--display);
+    color: #222;
+    width: var(--width);
+    height: var(--height);
+    justify-content: flex-end;
+}
+.container .header .header-right .header-right-li {
+    padding: 10px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.container .header .header-right .header-right-li:nth-child(4) {
+    background: rgb(243, 243, 243);
+    height: 20px;
+   margin-top: 10px;
+    padding-left: 7px;
+    padding-top: 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: var(--display);
+    cursor: pointer;
+    width: 90px;
+    margin-right: 50px;
+}
+.container .header .header-right .header-right-li img {
+    width: 20px;
+    height: 20px;
+}
+.container .header .header-right .header-right-li .header-right-li-span {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+    line-height: 100%;
+}
+/* mình tạo một thẻ section trong thằng li cuối để chức những option con  */
+.container .header .header-right .header-right-li:nth-child(4) .section {
+    position: absolute;
+    width: 470px;
+    height: 154px;
+    box-shadow: 0 0 4px rgb(160, 158, 158);
+    display: grid;
+    grid-template-columns: auto auto;
+    right: 50px;
+    top: 110px;
+    z-index: 4;
+    line-height: 50px;
+    opacity: 0;
+    visibility: hidden;
+    background: white;
+    /* thêm hiệu ứng transition cho nó hiện ra từ từ đồng thời ẩn div từ từ  */
+    transition: top .3s,opacity .3s;
+    -webkit-transition: top .3s,opacity .3s;
+    -moz-transition: top .3s,opacity .3s;
+    -ms-transition: top .3s,opacity .3s;
+    -o-transition: top .3s,opacity .3s;
+}
+/* cái class animation-tooltip này mình làm ra để tạo hiệu ứng trượt lên cho cái div con của thẻ li có tên là section  */
+.animation-tooltip{
+    
+    top:90px !important;
+      opacity: 1 !important;
+      visibility: visible !important; 
+      background: #fff;
+     
+  }
+  .content{
+      /* do phần header có position là fixed nên nó trám hết phần của content . Nên mình margin top cho nó đẩy xuống dưới  */
+      margin-top:130px;
+  }
+ </style>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+       <div class="header-left"></div>
+        <div class="header-right">
+           
+            <ul class="header-right-ul">
+                <li class="header-right-li" data-i18n="header.host">Host</li>
+                <li class="header-right-li" data-i18n="header.sign-up">Đăng kí </li>
+                <li class="header-right-li" data-i18n="header.sign-in">Đăng nhập </li>
+                <li class="header-right-li" id="icon-language">
+                    <img data-i18n="[src]icon.small-icon" class="header-right-li-img" src="https://www.luxstay.com/icons/vi.svg" alt="">
+                    <span class="header-right-li-span">VND</span>
+                    <i class="fas fa-caret-down" aria-hidden="true"></i>
+                    <section class="section" id="main-section">
+                        <li class="section-li">
+                            <img src="https://www.luxstay.com/icons/vi.svg" alt="" class="section-li-img" id="vnicon">
+                        <span class="vietnamese">Tiếng Việt </span>
+                        </li>
+                        <li class="section-li">VND Việt Nam Đồng </li>
+                       
+                        <li class="section-li">
+                            <img src="https://www.luxstay.com/icons/en.svg" alt="" class="section-li-img" id="enicon">
+                            <span class="english">English</span>
+                        </li>
+                        <li class="section-li">USD United States Dollar</li>
+                        <li class="section-li">
+                            <img src="https://www.luxstay.com/icons/ko.svg" alt="" class="section-li-img" id="koicon">
+                            <span class="korean">Korean</span>
+                        </li>
+                        
+                      
+                        
+                       
+                    </section>
+                </li>
+               
+            </ul>
+          
+        </div>
+    </header>
+    <div class="content">
+        <h1  data-i18n="content.h1">Xin chào các bạn . Mình tên là Duyệt </h1>
+        <h2  data-i18n="content.h2"> Mình sống ở Hóa Sơn ,Quảng Bình </h2>
+        <p  data-i18n="content.p">Mình yêu các bạn rất nhiều </p>
+    </div>
+</div>
+
+
+
+    <!-- thêm 2 đứa này vào nhé , vì thiếu nó thì không làm được đâu  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/1.11.1/i18next.min.js"></script>
+
+
+    <script>
+        $(function() {
+            // Cài đặt 
+            // Chúng ta sẽ thêm cái function để nó có thể kết nối tới 3 file có đuôi là .json 
+            i18n.init({
+                resGetPath: '/languages/__lng__.json', //lấy đường dẫn tới folder cha là languages 
+                debug: true,
+                fallbackLng: false,
+                load: 'unspecific'
+            },function () {
+                $('body').i18n();
+            });
+    
+    
+            // Thay đổi ngôn ngữ khi click vào option tiếng Anh 
+            // English
+            $('.english').on('click', function () {
+                 // Khi cái option có chứa cái class là english  click 
+                //thì cái body đại diện cho toàn bộ  trang web thì nó sẽ thay đổi các thành phần con của trang web 
+                // Set language
+                $.i18n.setLng('en', function() {
+                    $('body').i18n();
+                });
+                
+               
+                
+            });
+    
+    
+          //Thay đổi ngôn ngữ khi click vào option tiếng Việt 
+            // Vietnamese 
+    
+            $('.vietnamese').on('click', function () {
+                // Khi cái option có chứa cái class là vietnamese click 
+                //cái này cũng tương tự 
+                $.i18n.setLng('vi', function() {
+                    $('body').i18n();
+                });
+                
+            });
+            //cái option có class là korean này cũng vậy 
+            //korean 
+            $('.korean').on('click', function () {
+                // Set language
+                $.i18n.setLng('ko', function() {
+                    $('body').i18n();
+                });
+                
+            });
+    
+        })
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+ 
+let nav = document.querySelector(".section");
+
+let icon = document.querySelector("#icon-language");
+
+
+let current = "click1";
+
+
+icon.onclick = function(){
+    if(current == "click1"){
+        nav.style.visibility="visible";
+       
+    nav.classList.add("animation-tooltip");
+//    nav.style.opacity="1";
+      
+        current = "click2";
+    }
+    else if(current =="click2"){
+        nav.classList.remove("animation-tooltip");
+     
+       
+        // nav.style.opacity="0"
+
+        current = "click1";
+    }
+
+    
+}
+
+
+},false );
+    </script>
+</body>
+</html>

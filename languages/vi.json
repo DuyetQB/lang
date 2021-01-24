@@ -1,0 +1,17 @@
+{
+    "header":{
+        "host":"host",
+        "sing-up":"Đăng kí ",
+        "sign-in":"Đăng nhập "
+    },
+    "icon":{
+        "small-icon":"https://www.luxstay.com/icons/vi.svg"
+    },
+
+    "content":{
+        "h1":"Xin chào các bạn . Mình tên là Duyệt",
+        "h2":"Mình sống ở Hóa Sơn ,Quảng Bình",
+        "p":"Mình yêu các bạn rất nhiều"
+    }
+
+}

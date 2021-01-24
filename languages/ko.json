@@ -1,0 +1,17 @@
+{
+    "header":{
+        "host":"host",
+        "sing-up":"가입하기 ",
+        "sign-in":"로그인 "
+    },
+    "icon":{
+        "small-icon":"https://www.luxstay.com/icons/ko.svg"
+    },
+
+    "content":{
+        "h1":"안녕하세요. 나는 Duyet입니다",
+        "h2":"나는 Hoa Son, Quang Binh에 살고 있습니다.",
+        "p":"널 정말 사랑해"
+    }
+
+}

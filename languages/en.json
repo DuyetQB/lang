@@ -1,0 +1,17 @@
+{
+    "header":{
+        "host":"host",
+        "sing-up":"Sign up ",
+        "sign-in":"sign in "
+    },
+    "icon":{
+        "small-icon":"https://www.luxstay.com/icons/en.svg"
+    },
+
+    "content":{
+        "h1":"hi guys . I'm Duyet",
+        "h2":"I'm living in Hoa Son , Quang Binh",
+        "p":"I love you so much"
+    }
+
+}
