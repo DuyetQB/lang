@@ -1,7 +1,7 @@
 {
     "header":{
         "host":"host",
-        "sing-up":"Đăng kí ",
+        "sign-up":"Đăng kí ",
         "sign-in":"Đăng nhập "
     },
     "icon":{

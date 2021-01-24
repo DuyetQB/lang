@@ -1,7 +1,7 @@
 {
     "header":{
         "host":"host",
-        "sing-up":"Sign up ",
+        "sign-up":"Sign up ",
         "sign-in":"sign in "
     },
     "icon":{

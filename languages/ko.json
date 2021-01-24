@@ -1,7 +1,7 @@
 {
     "header":{
         "host":"host",
-        "sing-up":"가입하기 ",
+        "sign-up":"가입하기 ",
         "sign-in":"로그인 "
     },
     "icon":{
